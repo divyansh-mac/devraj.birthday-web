@@ -1,4 +1,50 @@
-<!DOCTYPE html>
+<div class="cake">
+  <div class="candle">
+    <div class="flame"></div>
+  </div>
+</div>
+
+<style>
+.cake {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: #FFB6C1;
+  margin: 50px auto;
+  border-radius: 10px;
+}
+
+.candle {
+  position: absolute;
+  top: -40px;
+  left: 45px;
+  width: 10px;
+  height: 40px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+
+.flame {
+  position: absolute;
+  top: -20px;
+  left: 2px;
+  width: 6px;
+  height: 20px;
+  background: radial-gradient(ellipse at center, #ff9900 0%, #ff0000 70%);
+  border-radius: 50% 50% 50% 50%;
+  animation: flicker 1s infinite alternate;
+  transform-origin: bottom center;
+}
+
+@keyframes flicker {
+  0%   { transform: scaleY(1) rotate(0deg); opacity: 1; }
+  25%  { transform: scaleY(1.1) rotate(-1deg); opacity: 0.8; }
+  50%  { transform: scaleY(0.9) rotate(1deg); opacity: 1; }
+  75%  { transform: scaleY(1.05) rotate(-2deg); opacity: 0.9; }
+  100% { transform: scaleY(1) rotate(0deg); opacity: 1; }
+}
+</style><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
