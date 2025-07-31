@@ -826,30 +826,4 @@ Let me know if you want this in a birthday HTML page with music, cake, heart tre
       <source src="aud.mp3" type="audio/mpeg">
     </audio>
 
-    <script>
-      window.addEventListener('load', function() {
-        const audio = document.getElementById("bgm");
-        audio.muted = false;
-        audio.play().catch(e => {
-          console.log("Autoplay blocked, playing on user interaction instead.");
-        });
-      });
-
-      const toggleBtn = document.getElementById("audioToggle");
-      let isPlaying = true;
-
-      toggleBtn.addEventListener("click", function () {
-        const audio = document.getElementById("bgm");
-        if (isPlaying) {
-          audio.pause();
-          toggleBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
-        } else {
-          audio.play();
-          toggleBtn.innerHTML = '<i class="fas fa-music"></i>';
-        }
-        isPlaying = !isPlaying;
-      });
-    </script>
-
-    <!-- Floating Elements -->
-    <div class="floating-hearts" id="floatingHearts"></div>
+    
